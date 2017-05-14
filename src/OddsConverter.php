@@ -11,6 +11,8 @@ namespace Sharapov\OddsConverter;
 
 class OddsConverter {
 
+  const ODD_EVENS_KEY_WORD = 'evens';
+
   protected $oddDecimal;
 
   /**
@@ -30,6 +32,9 @@ class OddsConverter {
    * @param $odd
    */
   public function setOdd( $odd ) {
+    if ( strtolower( $odd ) == self::ODD_EVENS_KEY_WORD ) {
+      $odd = '1/1';
+    }
     // Detect odd type and convert it to decimal
     if ( $this->_isDecimal( $odd ) ) { // Decimal detected
       $this->oddDecimal = $odd;
