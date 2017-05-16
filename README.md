@@ -11,7 +11,7 @@ You can either get the files from GIT or you can install the library via [Compos
 ```json
 {
     "require": {
-        "sharapov/odds-converter": "1.0"
+        "sharapov/odds-converter": "1.01"
     }
 }
 ```
